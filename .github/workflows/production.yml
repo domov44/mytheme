@@ -27,3 +27,4 @@ jobs:
             wp-content/cache
             wp-content/languages
             wp-content/updraft
+            .git
