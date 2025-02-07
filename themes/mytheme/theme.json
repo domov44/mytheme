@@ -1,0 +1,35 @@
+{
+    "version": 2,
+    "settings": {
+        "color": {
+            "palette": [
+                {
+                    "name": "Primary",
+                    "slug": "primary",
+                    "color": "#a366ff"
+                },
+                {
+                    "name": "Secondary",
+                    "slug": "secondary",
+                    "color": "#ce1e1e"
+                },
+                {
+                    "name": "Content",
+                    "slug": "content",
+                    "color": "#ffffff"
+                },
+                {
+                    "name": "Background",
+                    "slug": "background",
+                    "color": "161316"
+                },
+                {
+                    "name": "Surface",
+                    "slug": "surface",
+                    "color": "#0b090b"
+                }
+            ],
+            "defaultPalette": false
+        }
+    }
+}
