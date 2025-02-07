@@ -28,3 +28,4 @@ jobs:
             wp-content/languages
             wp-content/updraft
             .git
+            .gitignore
