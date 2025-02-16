@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn--primary,
+.is-style-primary a,
+.is-style-primary .wp-block-button__link.wp-element-button {
+    @apply text-white border-2 px-6 py-2 rounded-full transition-opacity duration-200 cursor-pointer w-fit min-h-[44px] flex items-center justify-center gap-1.5;
+    background: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--white);
+    border: 2px solid var(--wp--preset--color--primary);
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main {
+    padding-top: var(--wp--custom--header-size);
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.mytheme-content {
+    @apply mx-auto max-w-2xl px-4 py-24 lg:max-w-7xl lg:px-8 flex flex-col gap-8;
+}

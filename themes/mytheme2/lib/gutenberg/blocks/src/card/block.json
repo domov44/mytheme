@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "block/card",
+	"version": "0.1.0",
+	"title": "Carte",
+	"category": "theme",
+	"description": "Carte avec image, titre et liste",
+	"supports": {
+		"spacing": {
+			"blockGap": true,
+			"margin": [ "top", "bottom", "right", "left" ],
+			"__experimentalDefaultControls": {
+				"blockGap": true
+			}
+		},
+		"color": {
+			"gradients": true,
+			"heading": true,
+			"button": true,
+			"link": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+		}
+	},
+	"attributes": {
+		"url": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "href"
+		},
+		"theme": {
+			"type": "string",
+			"default": "color--none"
+		}
+	},
+	"example": {
+		"attributes": {
+			"url": "https://example.com"
+		}
+	},
+	"textdomain": "card"
+}
