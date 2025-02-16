@@ -1,13 +1,7 @@
 const { registerBlockType } = wp.blocks;
-const { RichText, InspectorControls, ColorPalette } = wp.blockEditor;
+const { RichText, InspectorControls, ColorPalette, useBlockProps } = wp.blockEditor;
 const { PanelBody, TextControl, ToggleControl } = wp.components;
 const { Fragment, createElement } = wp.element;
-
-const getColorSlug = (hexValue, colors) => {
-    if (!hexValue) return '';
-    const color = colors.find(c => c.color === hexValue);
-    return color ? color.slug : '';
-};
 
 registerBlockType('custom/hero', {
     title: 'Hero Section',
@@ -17,12 +11,12 @@ registerBlockType('custom/hero', {
         title: { type: 'string', source: 'html', selector: 'h1' },
         subtitle: { type: 'string', source: 'html', selector: 'p' },
         backgroundColor: { type: 'string', default: 'background' },
-        titleColor: { type: 'string', default: 'primary' },
-        textColor: { type: 'string', default: 'text' },
+        titleColor: { type: 'string', default: 'content' },
+        textColor: { type: 'string', default: 'content' },
         buttonText: { type: 'string' },
         buttonLink: { type: 'string' },
-        buttonTextColor: { type: 'string', default: 'primary' },
-        buttonBackgroundColor: { type: 'string', default: 'background' },
+        buttonTextColor: { type: 'string', default: 'content' },
+        buttonBackgroundColor: { type: 'string', default: 'primary' },
         showButton: { type: 'boolean', default: false }
     },
 
@@ -42,15 +36,15 @@ registerBlockType('custom/hero', {
 
         const { colors } = wp.data.select('core/block-editor').getSettings();
 
-        const onColorChange = (colorType, setColor) => (hexValue) => {
-            const slug = getColorSlug(hexValue, colors);
+        const onColorChange = (colorType) => (hexValue) => {
+            const color = colors.find(c => c.color === hexValue);
+            const slug = color ? color.slug : '';
             setAttributes({ [colorType]: slug });
         };
 
-        const getHexFromSlug = (slug) => {
-            const color = colors.find(c => c.slug === slug);
-            return color ? color.color : '';
-        };
+        const blockProps = useBlockProps({
+            className: `hero-block has-${backgroundColor}-background-color hero-container`
+        });
 
         return createElement(Fragment, null,
             createElement(InspectorControls, null,
@@ -68,25 +62,25 @@ registerBlockType('custom/hero', {
                     createElement('div', { className: 'block-editor-block-inspector__color-group' },
                         createElement('p', null, 'Couleur de fond'),
                         createElement(ColorPalette, {
-                            colors: colors,
-                            value: getHexFromSlug(backgroundColor),
-                            onChange: onColorChange('backgroundColor', setAttributes)
+                            colors,
+                            value: colors.find(c => c.slug === backgroundColor)?.color,
+                            onChange: onColorChange('backgroundColor')
                         })
                     ),
                     createElement('div', { className: 'block-editor-block-inspector__color-group' },
                         createElement('p', null, 'Couleur du titre'),
                         createElement(ColorPalette, {
-                            colors: colors,
-                            value: getHexFromSlug(titleColor),
-                            onChange: onColorChange('titleColor', setAttributes)
+                            colors,
+                            value: colors.find(c => c.slug === titleColor)?.color,
+                            onChange: onColorChange('titleColor')
                         })
                     ),
                     createElement('div', { className: 'block-editor-block-inspector__color-group' },
                         createElement('p', null, 'Couleur du texte'),
                         createElement(ColorPalette, {
-                            colors: colors,
-                            value: getHexFromSlug(textColor),
-                            onChange: onColorChange('textColor', setAttributes)
+                            colors,
+                            value: colors.find(c => c.slug === textColor)?.color,
+                            onChange: onColorChange('textColor')
                         })
                     ),
                     createElement(ToggleControl, {
@@ -108,25 +102,23 @@ registerBlockType('custom/hero', {
                         createElement('div', { className: 'block-editor-block-inspector__color-group' },
                             createElement('p', null, 'Couleur du texte du bouton'),
                             createElement(ColorPalette, {
-                                colors: colors,
-                                value: getHexFromSlug(buttonTextColor),
-                                onChange: onColorChange('buttonTextColor', setAttributes)
+                                colors,
+                                value: colors.find(c => c.slug === buttonTextColor)?.color,
+                                onChange: onColorChange('buttonTextColor')
                             })
                         ),
                         createElement('div', { className: 'block-editor-block-inspector__color-group' },
                             createElement('p', null, 'Couleur de fond du bouton'),
                             createElement(ColorPalette, {
-                                colors: colors,
-                                value: getHexFromSlug(buttonBackgroundColor),
-                                onChange: onColorChange('buttonBackgroundColor', setAttributes)
+                                colors,
+                                value: colors.find(c => c.slug === buttonBackgroundColor)?.color,
+                                onChange: onColorChange('buttonBackgroundColor')
                             })
                         )
                     ]
                 )
             ),
-            createElement('section', {
-                className: `hero-block has-${backgroundColor}-background-color`,
-            },
+            createElement('section', blockProps,
                 createElement(RichText, {
                     tagName: 'h1',
                     placeholder: 'Votre Titre',
@@ -163,10 +155,12 @@ registerBlockType('custom/hero', {
             showButton
         } = attributes;
 
-        return createElement('section', {
-            className: `hero-block has-${backgroundColor}-background-color`,
-        },
-            createElement('h1', {
+        const blockProps = useBlockProps.save({
+            className: `hero-block has-${backgroundColor}-background-color hero-container`
+        });
+
+        return createElement('section', blockProps,
+            createElement('h1', { 
                 className: `has-${titleColor}-color`
             }, title),
             createElement('p', {
