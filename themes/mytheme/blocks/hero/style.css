@@ -1,0 +1,17 @@
+.hero-block {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.hero-block h1 {
+    font-size: 3em;
+}
+
+.hero-block p {
+    font-size: 1.5em;
+}
