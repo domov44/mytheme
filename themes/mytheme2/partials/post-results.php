@@ -25,16 +25,11 @@ if ($query->have_posts()) :
             <?php endif; ?>
 
             <div class="my-4 flex flex-col justify-between">
-                <p class="text-sm"><?php the_category(', '); ?></p>
+                <p class="w-fit py-1 px-3 text-sm font-medium rounded-full bg-indigo-600 text-white hover:bg-indigo-400"><?php the_category(', '); ?></p>
                 <h2><?php the_title(); ?></h2>
 
-                <div class="line-clamp-4"><?php the_excerpt(); ?></div>
-
-                <a class="mt-4 btn--primary" href="<?php the_permalink(); ?>">
-                    <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.16255 17.9682L9.53495 9.70844L1.16261 1.92017" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                    En savoir plus
+                <a class="mt-4 has-primary-color text-sm" href="<?php the_permalink(); ?>">
+                    Read the post
                 </a>
             </div>
         </article>

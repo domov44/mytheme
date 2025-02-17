@@ -24,8 +24,13 @@
 				},
 				{
 					"slug": "paragraph",
-					"color": "#ffffff",
+					"color": "#9C99A0",
 					"name": "paragraph"
+				},
+				{
+					"slug": "heading",
+					"color": "#ffffff",
+					"name": "heading"
 				},
 				{
 					"color": "#161316",
@@ -150,7 +155,7 @@
 	"styles": {
 		"color": {
 			"background": "var:preset|color|background",
-			"text": "var:preset|color|paragraph"
+			"text": "var:preset|color|heading"
 		},
 		"spacing": {
 			"blockGap": "1.2rem",
@@ -174,7 +179,7 @@
 							"color": "currentColor",
 							"width": "1px"
 						},
-						"css": ".wp-block-button__link:not(.has-background):hover {background-color:color-mix(in srgb, var(--wp--preset--color--paragraph) 5%, transparent);}",
+						"css": ".wp-block-button__link:not(.has-background):hover {background-color:color-mix(in srgb, var(--wp--preset--color--heading) 5%, transparent);}",
 						"spacing": {
 							"padding": {
 								"bottom": "calc(1rem - 1px)",
@@ -216,7 +221,7 @@
 					"fontSize": "var(--wp--preset--font-size--medium)"
 				},
 				"color": {
-					"text": "var:preset|color|accent-1"
+					"text": "var:preset|color|paragraph"
 				}
 			}
 		},
@@ -234,7 +239,7 @@
 				},
 				":hover": {
 					"color": {
-						"background": "color-mix(in srgb, var(--wp--preset--color--paragraph) 85%, transparent)",
+						"background": "color-mix(in srgb, var(--wp--preset--color--heading) 85%, transparent)",
 						"text": "var:preset|color|base"
 					},
 					"border": {

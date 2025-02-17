@@ -56,12 +56,12 @@
 </nav>
 
 <!-- Menu features -->
-<div class="hidden lg:flex lg:flex-1 lg:justify-end">
+<div class="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-4">
     <?php
     if (isset($menu_items_features) && $menu_items_features) :
         foreach ($menu_items_features as $item) :
             $target = $item->target === '_blank' ? ' target="_blank" rel="noopener noreferrer"' : '';
-            $active_class = ($item->url == $current_url) ? 'text-blue-600' : 'text-gray-900';
+            $active_class = ($item->url == $current_url) ? 'has-primary-color' : 'has-paragraph-color';
     ?>
             <a class="text-sm font-semibold leading-6  <?= esc_attr($active_class) ?> <?= implode(' ', $item->classes) ?>" href="<?= esc_url($item->url) ?>" aria-label="Voir la page" <?= $target ?>>
                 <?= $item->title ?>
