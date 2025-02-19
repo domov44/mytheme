@@ -42,5 +42,6 @@
 			"url": "https://example.com"
 		}
 	},
-	"textdomain": "card"
+	"textdomain": "card",
+	"editorScript": "file:./index.js"
 }
