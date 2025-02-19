@@ -39,7 +39,7 @@
         </div>
     </header>
 
-    <div id="search-container" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+    <div id="search-container" class="hidden fixed inset-0 bg-white bg-opacity-80 flex items-center justify-center z-50">
         <form role="search" method="get" class="flex" action="<?php echo home_url('/'); ?>">
             <input type="search" name="s" placeholder="Rechercher..."
                 class="w-80 px-4 py-2 rounded-l border-none focus:ring-2 focus:ring-yellow-500 outline-none"

@@ -1,4 +1,4 @@
-<article class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-2xl transition-shadow duration-300">
+<article class="rounded-lg shadow-lg overflow-hidden has-surface-background-color hover:shadow-2xl transition-shadow duration-300">
     <?php if (has_post_thumbnail()) : ?>
         <a href="<?php the_permalink(); ?>">
             <?php the_post_thumbnail('medium', ['class' => 'w-full h-48 object-cover']); ?>
