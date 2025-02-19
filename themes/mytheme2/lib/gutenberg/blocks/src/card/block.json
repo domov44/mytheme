@@ -9,7 +9,12 @@
 	"supports": {
 		"spacing": {
 			"blockGap": true,
-			"margin": [ "top", "bottom", "right", "left" ],
+			"margin": [
+				"top",
+				"bottom",
+				"right",
+				"left"
+			],
 			"__experimentalDefaultControls": {
 				"blockGap": true
 			}
