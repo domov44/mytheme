@@ -6,6 +6,30 @@
     "style": [
         "file:./style.css"
     ],
+    "supports": {
+        "spacing": {
+            "blockGap": true,
+            "margin": [
+                "top",
+                "bottom",
+                "right",
+                "left"
+            ],
+            "__experimentalDefaultControls": {
+                "blockGap": true
+            }
+        },
+        "color": {
+            "gradients": true,
+            "heading": true,
+            "button": true,
+            "link": true,
+            "__experimentalDefaultControls": {
+                "background": true,
+                "text": true
+            }
+        }
+    },
     "icon": "admin-comments",
     "keywords": [
         "testimonial",
