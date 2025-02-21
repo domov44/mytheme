@@ -3,8 +3,11 @@
 // Import theme assets (template & blocks)
 //_________
 include get_template_directory() . '/lib/core/theme-support.php';
+include get_template_directory() . '/lib/core/custom-post-type.php';
 // include(get_template_directory() . '/lib/gutenberg/hook/hooks.php');
 include(get_template_directory() . '/lib/gutenberg/blocks/gutenberg.php');
+include(get_template_directory() . '/blocks/register-block.php');
+
 
 
 // Import assets
@@ -27,7 +30,3 @@ function enqueue_admin()
     wp_enqueue_script('mytheme-script', get_stylesheet_directory_uri() . '/assets/scripts/script.js', array(), null, true);
 }
 add_action('admin_enqueue_scripts', 'enqueue_admin');
-
-
-
-

@@ -1,0 +1,19 @@
+{
+    "name": "acf/testimonials",
+    "title": "Témoignage",
+    "description": "Un bloc de témoignage simple",
+    "category": "text",
+    "style": [
+        "file:./style.css"
+    ],
+    "icon": "admin-comments",
+    "keywords": [
+        "testimonial",
+        "témoignage",
+        "avis"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "template.php"
+    }
+}
