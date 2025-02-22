@@ -1,0 +1,85 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 15rem);
+    width: 100%;
+}
+
+.hero.has-gradient {
+    gap: 80px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.content_wrapper {
+    max-width: 600px;
+}
+
+.hero span {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.hero h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.demo-img {
+    display: block;
+    position: relative;
+}
+
+.demo-img::before {
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), var(--wp--preset--color--background));
+    bottom: -1px;
+    content: "";
+    height: 50%;
+    left: -1px;
+    position: absolute;
+    width: calc(100% + 2px);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.demo-img img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.overlay {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    background: radial-gradient(40vw 50vw at 50% 160%, var(--wp--preset--color--primary), transparent);
+}

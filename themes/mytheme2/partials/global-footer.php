@@ -1,4 +1,4 @@
-<div class="container mx-auto px-4 flex flex-col md:flex-row justify-between gap-6">
+<div class="container max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between gap-6">
     <!-- Menu -->
     <div class="w-full md:w-1/3">
         <?php wp_nav_menu(['theme_location' => 'menu footer']) ?>

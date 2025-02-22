@@ -1,0 +1,49 @@
+{
+    "name": "acf/hero",
+    "title": "Hero",
+    "description": "Un bloc de hero simple",
+    "category": "theme",
+    "style": [
+        "file:./style.css"
+    ],
+    "supports": {
+        "align": true,
+        "spacing": {
+            "padding": true,
+            "margin": true,
+            "blockGap": true,
+            "__experimentalDefaultControls": {
+                "blockGap": true
+            }
+        },
+        "color": {
+            "background": true,
+            "text": true,
+            "gradients": true,
+            "__experimentalDefaultControls": {
+                "background": true,
+                "text": true
+            }
+        },
+        "typography": {
+            "fontSize": true,
+            "lineHeight": true,
+            "textTransform": true,
+            "letterSpacing": true,
+            "__experimentalFontWeight": true
+        },
+        "border": {
+            "radius": true,
+            "width": true
+        }
+    },
+    "icon": "cover-image",
+    "keywords": [
+        "section",
+        "hero"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "template.php"
+    }
+}
