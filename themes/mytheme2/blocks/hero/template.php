@@ -43,10 +43,11 @@ if ($hero_heading || $hero_subtitle || $hero_content || $first_button || $second
         <?php if ($degrade): ?>
             <div class='overlay'></div>
         <?php endif; ?>
+
+        <?php if ($image): ?>
+            <div class="demo-img">
+                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+            </div>
+        <?php endif; ?>
     </section>
-    <?php if ($image): ?>
-        <div class="demo-img">
-            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
-        </div>
-    <?php endif; ?>
 <?php endif; ?>
