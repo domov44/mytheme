@@ -49,7 +49,7 @@ set_query_var('current_url', $current_url);
 ?>
 
 <!-- Header -->
-<header class="fixed w-full has-surface-background-color">
+<header class="header w-full">
     <div class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <!-- Logo menu -->
         <div class="flex lg:flex-1">

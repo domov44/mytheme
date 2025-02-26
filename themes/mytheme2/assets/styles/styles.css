@@ -1,14 +1,13 @@
 @import "tailwind.css";
-.btn--secondary,
-.is-style-secondary a,
-.is-style-secondary .wp-block-button__link.wp-element-button {
+.btn--primary,
+.is-style-primary a,
+.is-style-primary .wp-block-button__link.wp-element-button {
   font-family: var(--wp--preset--font-family--primary);
   font-size: var(--wp--preset--font-size--medium);
   font-weight: var(--wp--custom--font-weight--semi-bold);
   display: flex;
-  min-width: 100px;
   white-space: nowrap;
-  padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--30);
+  padding: 5px 15px;
   transition: all 0.25s;
   cursor: pointer;
   width: -moz-fit-content;
@@ -21,6 +20,40 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
+  border-radius: 50px;
+  /* Primary */
+  background: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--white);
+  border: 2px solid var(--wp--preset--color--primary);
+}
+.btn--primary:hover,
+.is-style-primary a:hover,
+.is-style-primary .wp-block-button__link.wp-element-button:hover {
+  opacity: 0.5;
+}
+
+.btn--secondary,
+.is-style-secondary a,
+.is-style-secondary .wp-block-button__link.wp-element-button {
+  font-family: var(--wp--preset--font-family--primary);
+  font-size: var(--wp--preset--font-size--medium);
+  font-weight: var(--wp--custom--font-weight--semi-bold);
+  display: flex;
+  white-space: nowrap;
+  padding: 5px 15px;
+  transition: all 0.25s;
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+  outline: none;
+  border-radius: var(--wp--custom--border-radius--small);
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 50px;
   /* Primary */
   background: var(--wp--preset--color--secondary);
   color: var(--wp--preset--color--white);
@@ -39,9 +72,8 @@
   font-size: var(--wp--preset--font-size--medium);
   font-weight: var(--wp--custom--font-weight--semi-bold);
   display: flex;
-  min-width: 100px;
   white-space: nowrap;
-  padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--30);
+  padding: 5px 15px;
   transition: all 0.25s;
   cursor: pointer;
   width: -moz-fit-content;
@@ -54,6 +86,7 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
+  border-radius: 50px;
   /* Primary */
   background: transparent;
   color: var(--wp--preset--color--primary);
@@ -79,9 +112,8 @@
   font-size: var(--wp--preset--font-size--medium);
   font-weight: var(--wp--custom--font-weight--semi-bold);
   display: flex;
-  min-width: 100px;
   white-space: nowrap;
-  padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--30);
+  padding: 5px 15px;
   transition: all 0.25s;
   cursor: pointer;
   width: -moz-fit-content;
@@ -94,6 +126,7 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
+  border-radius: 50px;
   /* Primary */
   background: transparent;
   color: var(--wp--preset--color--secondary);

@@ -25,12 +25,7 @@
 }
 
 .hero span {
-    font-size: 1rem;
-    font-weight: 300;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    opacity: 0.8;
+    color: var(--wp--preset--color--heading);
 }
 
 .hero h1 {

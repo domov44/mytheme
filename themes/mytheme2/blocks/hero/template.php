@@ -3,7 +3,7 @@ $hero_heading = get_field('heading');
 $hero_subtitle = get_field('subtitle');
 $hero_content = get_field('content');
 $degrade = get_field('degrade');
-$image = get_field('image'); // Correction ici pour éviter d'écraser $degrade
+$image = get_field('image');
 
 $first_button = get_field('first_button');
 $second_button = get_field('second_button');
@@ -12,7 +12,9 @@ if ($hero_heading || $hero_subtitle || $hero_content || $first_button || $second
     <section class="hero <?php echo $degrade ? 'has-gradient' : ''; ?>">
         <div class="hero-content">
             <?php if ($hero_subtitle): ?>
-                <span><?php echo esc_html($hero_subtitle); ?></span>
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium has-surface-background-color has-heading-color">
+                    <?php echo esc_html($hero_subtitle); ?>
+                </span>
             <?php endif; ?>
 
             <?php if ($hero_heading): ?>
@@ -27,13 +29,13 @@ if ($hero_heading || $hero_subtitle || $hero_content || $first_button || $second
 
             <div class="hero-buttons">
                 <?php if ($first_button): ?>
-                    <a href="<?php echo esc_url($first_button['url']); ?>" class="wp-block-button__link wp-element-button" target="<?php echo esc_attr($first_button['target']); ?>">
+                    <a href="<?php echo esc_url($first_button['url']); ?>" class="btn--primary" target="<?php echo esc_attr($first_button['target']); ?>">
                         <?php echo esc_html($first_button['title']); ?>
                     </a>
                 <?php endif; ?>
 
                 <?php if ($second_button): ?>
-                    <a href="<?php echo esc_url($second_button['url']); ?>" class="wp-block-button__link wp-element-button" target="<?php echo esc_attr($second_button['target']); ?>">
+                    <a href="<?php echo esc_url($second_button['url']); ?>" class="btn--secondary" target="<?php echo esc_attr($second_button['target']); ?>">
                         <?php echo esc_html($second_button['title']); ?>
                     </a>
                 <?php endif; ?>

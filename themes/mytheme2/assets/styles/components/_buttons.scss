@@ -3,9 +3,8 @@
     font-size: var(--wp--preset--font-size--medium);
     font-weight: var(--wp--custom--font-weight--semi-bold);
     display: flex;
-    min-width: 100px;
     white-space: nowrap;
-    padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--30);
+    padding: 5px 15px;
     transition: all 0.25s;
     cursor: pointer;
     width: fit-content;
@@ -16,6 +15,7 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
+    border-radius: 50px;
 
     &:hover {
         opacity: 0.5;
@@ -63,11 +63,11 @@
 }
 
 // Classes pour les boutons primaires
-// .btn--primary,
-// .is-style-primary a,
-// .is-style-primary .wp-block-button__link.wp-element-button {
-//     @include button-style("primary");
-// }
+.btn--primary,
+.is-style-primary a,
+.is-style-primary .wp-block-button__link.wp-element-button {
+    @include button-style("primary");
+}
 
 // Classes pour les boutons secondaires
 .btn--secondary,
