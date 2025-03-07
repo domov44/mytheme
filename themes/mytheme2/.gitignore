@@ -1,0 +1,43 @@
+# Node modules
+/node_modules/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+/.pnp/
+/.pnp.js
+
+# Build output
+/dist/
+/public/build/
+/public/assets/
+
+# Tailwind
+/.tailwind/
+
+# WordPress-specific
+/wp-content/plugins/
+/wp-content/themes/your-theme/node_modules/
+
+# .env files (for environment variables)
+.env
+.env.local
+.env.*.local
+
+# Mac-specific files
+.DS_Store
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# npm package lock files (if you use yarn)
+package-lock.json
+yarn.lock
+
+# Operating system files
+Thumbs.db
+Desktop.ini

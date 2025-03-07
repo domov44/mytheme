@@ -1,0 +1,261 @@
+// .wpcf7-form {
+
+//   input:not(input[type='checkbox']):not(input[type='submit']),
+//   select,
+//   button,
+//   textarea {
+//     background: var(--wp--preset--color--accent-3-light);
+//   }
+
+//   .wpcf7-form-control {
+//     color: var(--wp--preset--color--accent-1);
+//     // font-size: 16px;
+//   }
+//   .wpcf7-not-valid-tip, .wpcf7-response-output {
+//     font-size: 16px;
+//   }
+
+//   .wpcf7-checkbox > span {
+//     display: flex;
+//     align-items: center;
+//     gap: 0.25rem;
+//     margin: 0;
+//   }
+//   .submit {
+//     margin: auto;
+//     display: grid;
+//     place-items: flex-end;
+ 
+
+//     label {
+//       display: flex;
+//       align-items: center;
+//       flex-direction: column;
+//       gap: 10px;
+
+//       .wpcf7-spinner {
+//         background-color: var(--wp--preset--color--accent-1);
+//       }
+//     }
+
+//     >.wp-block-button {
+//       flex-direction: column-reverse;
+//     }
+//   }
+//   .wpcf7-submit {
+//     @include button-style("accent-1");
+//   }
+// }
+
+// .wpcf7-form > p {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   row-gap: 36px;
+//   column-gap: 52px;
+
+//   input:not(input[type='checkbox']):not(input[type='submit']),
+//   select,
+//   button,
+//   textarea,
+//   .button-submit {
+//     font-family: var(--wp--preset--font-family--nunito);
+//     font-size: 18px;
+//     // font-weight: 500;
+//     line-height: 32px;
+//     text-align: left;
+//     padding: 16px 21px;
+
+//     border-width: 2px;
+//     border-style: solid;
+//     border-color: var(--wp--preset--color--accent-3-light);
+
+//     width: 100%;
+//     border-radius: 5px;
+//     color: var(--wp--preset--color--accent-1);
+
+
+//     &::placeholder {
+//       color: var(--wp--preset--color--accent-1);
+//       opacity: 1;
+//     }
+
+//     &:focus {
+//       outline: none;
+//       border-color: var(--wp--preset--color--accent-1);
+//     }
+//   }
+
+//   input:not(input[type='checkbox']):not(input[type='submit']),
+//   select,
+//   .button-submit {
+//     height: 65px;
+//   }
+//   .fileLabel {
+//     font-size: 12px;
+//   }
+//   .button-submit {
+//     cursor: pointer;
+//   }
+//   .button-submit:hover {
+//     background: var(--wp--preset--color--accent-3-light);
+//   }
+
+
+//   textarea {
+//     resize: vertical;
+//     height: 180px;
+//     /* user can resize vertically, but width is fixed */
+//   }
+
+//   input[type="file"] {
+//     display: none;
+//   }
+
+//   input[type='checkbox'] {
+//     height: 20px;
+//     width: 20px;
+
+//     border: 2px solid var(--wp--preset--color--accent-3-light);
+//     border-radius: 5px;
+//     background: var(--wp--preset--color--accent-3-light);
+
+//     &:checked {
+//       background-color: var(--wp--preset--color--accent-1);
+//     }
+
+//   }
+
+//   .check {
+//     label {
+//       display: flex;
+//       align-items: center;
+//       gap: 3px;
+//     }
+//   }
+
+//   .submit-label {
+//     position: relative;
+//     justify-content: end;
+//     display: flex;
+//     flex-direction: column;
+
+//     .cross {
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       height: 65px;
+//       width: 65px;
+//       border-color: var(--wp--preset--color--accent-3-light);
+//       padding: 0;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+
+//       svg path {
+
+//         stroke: var(--wp--preset--color--accent-1);
+//       }
+//     }
+//   }
+
+
+
+//   // .wpcf7-not-valid-tip {
+//   //   color: var(--wp--preset--color--accent-1);
+//   // }
+
+//   // input[type='submit'] {
+//   //   display: none;
+//   // }
+
+//   .wpcf7-checkbox label {
+//     display: flex;
+//     align-items: center;
+//     gap: 32px;
+//   }
+
+//   .grid-2 {
+//     grid-column: span 2;
+//   }
+
+//   .wpcf7-response-output {
+//     grid-column: span 2;
+//     border: none !important;
+//     margin: 0 !important;
+//     color: var(--wp--preset--color--accent-3-light);
+//     text-align: center;
+//     margin-top: -3-light6px !important;
+//   }
+
+
+//   .wpcf7-form-control.wpcf7-checkbox {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 4px;
+//   }
+
+//   option {
+//     font-family: 'Arial';
+//     font-size: 18px;
+//     font-weight: 500;
+//   }
+
+//   input,
+//   select {
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     text-indent: 1px;
+//     text-overflow: '';
+//   }
+
+//   label {
+//     font-size: 18px;
+//   }
+//   .cf7-select {
+   
+//     span {
+//       position: relative;
+
+//       svg {
+//         position: absolute;
+//         right: 19px;
+//         top: 13px;
+//         transform: translateY(-50%);
+//         stroke-width: 1.5px;
+//       }
+//     }
+//   }
+
+// }
+
+
+
+// @media (max-width: 1000px) {
+//   .wpcf7-form {
+//     width: 100%;
+//     padding: 0;
+//     display: flex;
+//     grid-template-columns: inherit;
+//     row-gap: inherit;
+//     column-gap: inherit;
+//     flex-direction: column;
+//     gap: 20px;
+
+//     input[type='checkbox'] {
+//       height: 20px;
+//       width: 20px;
+//     }
+//     .wpcf7-list-item {
+//       margin: 0!important;
+//       .wpcf7-list-item-label {
+//         width: fit-content;
+//       }
+//     }
+//     & > p {
+//       display: flex;
+//       grid-template-columns: inherit;
+//       flex-direction: column;
+//     }
+//   }
+
+// }

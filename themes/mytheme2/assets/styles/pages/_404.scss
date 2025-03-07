@@ -1,0 +1,25 @@
+.page-error {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    h1 {
+        font-size: 250px;
+    }
+
+    .link {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: black;
+    }
+
+    .link svg {
+        transform: rotate(90deg);
+    }
+}

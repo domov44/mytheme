@@ -1,0 +1,27 @@
+.alignwide {
+    max-width: var(--wp--style--global--wide-size);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignfull {
+    max-width: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-block {
+    max-width: var(--wp--style--global--content-size);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.direction--rtl {
+    direction: rtl;
+
+    .wp-block-group {
+        direction: ltr;
+    }
+}
